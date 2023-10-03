@@ -2,9 +2,9 @@ name: deploy_backend
 
 on:
   push:
-    branches: [main]
+    branches: [main ]
     paths:
-      - "backend/**"
+    - "backend/**"
 
 env:
   AZURE_FUNCTIONAPP_NAME: "GetResumeCounter" # set this to your function app name on Azure
@@ -41,12 +41,11 @@ jobs:
         run: |
          pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/tests'
          dotnet test
-         popd  
-      
+           
       - name: "Run Azure Functions Action"
         uses: Azure/functions-action@v1
         id: fa
         with:
           app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-          package: "${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/api"
+          package: "${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/api/output"
          
