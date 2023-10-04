@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 const functionApiUrl = "https://getresumecounter-inji.azurewebsites.net/api/GetResumeCounter?code=VqvXhRU2TzlGgyYmk8BAgH6TUOTYD2qT014wzVy9SZW9AzFuTcTnqQ=="
-const localfunctionApi = "http://localhost:7071/api/GetResumeCounter";
+const localfunctionApi = "";
 
 const getVisitCount = () => {
   let count = 30;
