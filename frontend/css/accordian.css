@@ -1,50 +1,55 @@
 /* ===== Google Font Import - Poppins ===== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-body{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:#121212;
-.accordion{
-    max-width: 1500px;
+
+
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #121212;
+
+  .accordion {
+    max-width: 1050px;
     width: 100%;
-    background: #;
+
     margin: 0 15px;
     padding: 15px;
     border-radius: 8px;
-    box-shadow:  0 0 4px rgba(0,0,0,0.2);
-}
-.accordion .accordion-content{
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  }
+  .accordion .accordion-content {
     margin: 10px 0;
     border-radius: 4px;
-    background: #FFF7F0;
-    border: 1px solid #FFD6B3;
+    background: #f0faff;
+    border: 1px solid #cceeff;
     overflow: hidden;
-}
-.accordion-content:nth-child(2){
-    background-color: #F0FAFF;
-    border-color: #CCEEFF;
-}
-.accordion-content:nth-child(3){
-    background-color: #FFF0F3;
-    border-color: #FFCCD6;
-}
-.accordion-content:nth-child(4){
-    background-color: #F0F0FF;
-    border-color: #CCCCFF;
-}
-.accordion-content.open{
+    text-align: center;
+  }
+  .accordion-content:nth-child(2) {
+    background-color: #f0faff;
+    border-color: #cceeff;
+  }
+  .accordion-content:nth-child(3) {
+    background-color: #f0faff;
+    border-color: #cceeff;
+  }
+  .accordion-content:nth-child(4) {
+    background-color: #f0faff;
+    border-color: #cceeff;
+  }
+  .accordion-content.open {
     padding-bottom: 10px;
-}
-.accordion-content header{
+  }
+  .accordion-content header {
     display: flex;
     min-height: 50px;
     padding: 0 15px;
@@ -52,86 +57,96 @@ body{
     align-items: center;
     justify-content: space-between;
     transition: all 0.2s linear;
-}
-.accordion-content.open header{
+  }
+  .accordion-content.open header {
     min-height: 35px;
-}
-.accordion-content header .title{
+  }
+  .accordion-content header .title {
     font-size: 14px;
     font-weight: 500;
     color: #333;
-}
-.accordion-content header i{
+  }
+  .accordion-content header i {
     font-size: 15px;
     color: #333;
-}
-.accordion-content .description{
+  }
+  .accordion-content .description {
     height: 0;
-    font-size: 12px;
+    font-size: 15px;
     color: #333;
     font-weight: 400;
     padding: 0 15px;
     transition: all 0.2s linear;
-}
+  }
 
-/* primary navigation
+  /* primary navigation
 --------------------------------------------------------------------- */
-#nav-wrap ul, #nav-wrap li, #nav-wrap a {
-	 margin: 0;
-	 padding: 0;
-	 border: none;
-	 outline: none;
+  #nav-wrap ul,
+  #nav-wrap li,
+  #nav-wrap a {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+  }
+
+  /* nav-wrap */
+  #nav-wrap {
+    font: 12px "opensans-bold", sans-serif;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    margin: 0 auto;
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  .opaque {
+    background-color: #333;
+  }
+
+  /* hide toggle button */
+  #nav-wrap > a.mobile-btn {
+    display: none;
+  }
+
+  ul#nav {
+    min-height: 48px;
+    width: auto;
+
+    /* center align the menu */
+    text-align: center;
+  }
+  ul#nav li {
+    position: relative;
+    list-style: none;
+    height: 48px;
+    display: inline-block;
+  }
+
+  /* Links */
+  ul#nav li a {
+    /* 8px padding top + 8px padding bottom + 32px line-height = 48px */
+
+    display: inline-block;
+    padding: 8px 13px;
+    line-height: 32px;
+    text-decoration: none;
+    text-align: left;
+    color: #fff;
+
+    -webkit-transition: color 0.2s ease-in-out;
+    -moz-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
+    -ms-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+  }
+
+  ul#nav li a:active {
+    background-color: transparent !important;
+  }
+  ul#nav li.current a {
+    color: #000000;
+  }
 }
-
-/* nav-wrap */
-#nav-wrap {
-   font: 12px 'opensans-bold', sans-serif;
-   width: 100%;
-   text-transform: uppercase;
-   letter-spacing: 2.5px;
-   margin: 0 auto;
-   z-index: 100;
-   position: fixed;
-   left: 0;
-   top: 0;
-}
-.opaque { background-color: #333; }
-
-/* hide toggle button */
-#nav-wrap > a.mobile-btn { display: none; }
-
-ul#nav {
-   min-height: 48px;
-   width: auto;
-
-   /* center align the menu */
-   text-align: center;
-}
-ul#nav li {
-   position: relative;
-   list-style: none;
-   height: 48px;
-   display: inline-block;
-}
-
-/* Links */
-ul#nav li a {
-
-/* 8px padding top + 8px padding bottom + 32px line-height = 48px */
-
-   display: inline-block;
-   padding: 8px 13px;
-   line-height: 32px;
-	text-decoration: none;
-   text-align: left;
-   color: #fff;
-
-	-webkit-transition: color .2s ease-in-out;
-	-moz-transition: color .2s ease-in-out;
-	-o-transition: color .2s ease-in-out;
-	-ms-transition: color .2s ease-in-out;
-	transition: color .2s ease-in-out;
-}
-
-ul#nav li a:active { background-color: transparent !important; }
-ul#nav li.current a { color: #000000; }
