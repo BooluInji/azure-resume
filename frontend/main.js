@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", (event) => {
   getVisitCount();
-});
+})
 
 const functionApi =
   "https://getresumecounter-inji.azurewebsites.net/api/GetResumeCounter?code=VqvXhRU2TzlGgyYmk8BAgH6TUOTYD2qT014wzVy9SZW9AzFuTcTnqQ==";
