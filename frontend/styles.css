@@ -2643,7 +2643,6 @@ figcaption {
   font-size: 12px;
   line-height: 150%;
   display: block;
-  
 }
 
 .button-round {
@@ -2768,7 +2767,6 @@ figcaption {
 
   .main-subheading {
     margin-top: 0;
-    
   }
 
   .content {
@@ -2843,7 +2841,6 @@ figcaption {
 
   .main-subheading {
     width: auto;
-   
   }
 
   .content {
@@ -2887,6 +2884,5 @@ figcaption {
     margin-bottom: 15px;
     font-size: 14px;
     line-height: 150%;
-   
   }
 }
